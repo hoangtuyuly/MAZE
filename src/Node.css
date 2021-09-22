@@ -1,0 +1,23 @@
+.node {
+    height: 20px;
+    width: 20px;
+    outline: solid 1px lightgray;
+    background-color: white;
+}
+
+.isStart {
+    background-color: red !important
+}
+
+.isEnd {
+    background-color: yellow !important
+}
+
+.isbarrier {
+    background-color: lightskyblue;
+}
+
+.isVisited {
+    background-color: black;
+}
+
