@@ -1,23 +1,27 @@
 .node {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     outline: solid 1px lightgray;
     background-color: white;
 }
 
+.isPath {
+    background-color: rgba(244,148,82,1) !important
+}
+
 .isStart {
-    background-color: red !important
+    background-color: rgba(247,89,64,1) !important
 }
 
 .isEnd {
-    background-color: yellow !important
+    background-color: rgba(249,206,0,1)!important
 }
 
 .isbarrier {
-    background-color: lightskyblue;
+    background-color: #29335C;
 }
 
 .isVisited {
-    background-color: black;
+    background-color: rgba(61,199,190,1);
 }
 
