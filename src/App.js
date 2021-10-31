@@ -339,6 +339,20 @@ function App() {
     setGrid(newGrid)
     }
 
+  const resetBoard = () => {
+    const newGrid = [...grid] 
+    grid.map((rows, i) => 
+      rows.map((node, j) => (
+        grid[i][j]['isPath'] = false,
+        grid[i][j]['visited'] = false,
+        grid[i][j]['weight'] = 0,
+        grid[i][j]['preNode'] = null,
+        grid[i][j]['distance'] = Infinity,
+        grid[i][j]['checked'] = false
+      )))
+    setGrid(newGrid)
+    }
+
   const clearPath = () => {
     const newGrid = [...grid] 
     grid.map((rows, i) => 
@@ -362,25 +376,27 @@ function App() {
               <li onClick={() => {
                 if (running === false){
                   setRunning(true);
+                  resetBoard();
                   setRunBreadth(true)}}}>Breadth First Search</li>
               <li onClick={() => {
                 if (running === false){
                   setRunning(true);
+                  resetBoard()
                   setRunDepth(true)}}}>Deth First Search</li>
               <li onClick={() => {
                 if (running === false){
                   setRunning(true);
-                  let newGrid = [...grid];
-                  grid[isStart[0]][isStart[1]]['distance'] = 0;
-                  setGrid(newGrid);
+                  resetBoard();
                   Dijkastra()}}}>Dijkastra's Search</li>
               <li onClick={() => {
                 if (running === false){
                   setRunning(true);
+                  resetBoard();
                   AStar()}}}>A* Search</li>
               <li onClick={() => {
                 if (running === false){
                   setRunning(true);
+                  resetBoard();
                   IDARun()}}}>IDA* Search</li>
             </ul> 
           </div>
